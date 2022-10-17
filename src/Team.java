@@ -5,6 +5,9 @@ public class Team {
     private ArrayList<Player> players;
     private int goalCounter = 0;
 
+    Team () {
+        this.setPlayers(new ArrayList<>());
+    }
     //setter name
     public void setName (String name){
         this.name = name;
@@ -29,6 +32,8 @@ public class Team {
 
     //addPlayer:: (Player) -> void
     public void addPlayer (Player player) {
+        this.players.add(player);
+        player.setTeam(this);
         return;
     }
 
