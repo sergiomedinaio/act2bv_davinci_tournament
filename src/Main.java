@@ -3,20 +3,17 @@ import java.util.Date;
 public class Main {
     public static void main(String args[]) {
         System.out.println("Da vinci tournament");
-        Season torneoDaVinci = new Season();
-        torneoDaVinci.setName("Torneo POO 2022, 2do Cuatri");
+        // Enero es 0, Agosto es 7 Date es fecha (1, 31), Day dia de la semana Domingo es 0
+        Date comienzoDeCuatri = new Date(2022, 7, 16);
 
-        Date comienzoDeCuatri = new Date();
-        comienzoDeCuatri.setYear(2022);
-        comienzoDeCuatri.setMonth(7); // Enero es 0, Agosto es 7
-        comienzoDeCuatri.setDate(16); //Date es fecha (1, 31), Day dia de la semana Domingo es 0
-        torneoDaVinci.setStartDate(comienzoDeCuatri);
+        Date finDelCuatri = new Date(2022, 11, 5);
 
-        Date finDelCuatri = new Date();
-        finDelCuatri.setYear(2022);
-        finDelCuatri.setMonth(11); // Dic es 11
-        finDelCuatri.setDate(5);
-        torneoDaVinci.setEndDate(finDelCuatri);
+        Season torneoDaVinci = new Season(
+            "Torneo POO 2022, 2do Cuatri",
+            comienzoDeCuatri,
+            finDelCuatri
+        );
+
 
         Match primerParcial = new Match();
         primerParcial.setLocation("Aula virtual de POO jueves");

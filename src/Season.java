@@ -7,6 +7,18 @@ public class Season{
     private Date endDate;
     private ArrayList<Match> matchs;
 
+    Season() { }
+
+    Season(String name) {
+        this.setName(name);
+    }
+
+    Season(String name, Date startDate, Date endDate) {
+        this.setName(name);
+        this.setStartDate(startDate);
+        this.setEndDate(endDate);
+    }
+
     public void setName(String name){
         this.name = name;
         return;
