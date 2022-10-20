@@ -7,13 +7,17 @@ public class Season{
     private Date endDate;
     private ArrayList<Match> matchs;
 
-    Season() { }
+    Season() {
+        this.setMatchs(new ArrayList<Match>());
+    }
 
     Season(String name) {
+        this.setMatchs(new ArrayList<Match>());
         this.setName(name);
     }
 
     Season(String name, Date startDate, Date endDate) {
+        this.setMatchs(new ArrayList<Match>());
         this.setName(name);
         this.setStartDate(startDate);
         this.setEndDate(endDate);
@@ -51,10 +55,16 @@ public class Season{
     }
 
     public void addMatch(Match match){
-        // agregar match a this.matchs
+        this.matchs.add(match);
         return;
     }
 
 
+    public ArrayList<Match> getMatchs() {
+        return this.matchs;
+    }
 
+    public void setMatchs(ArrayList<Match> matchs) {
+        this.matchs = matchs;
+    }
 }

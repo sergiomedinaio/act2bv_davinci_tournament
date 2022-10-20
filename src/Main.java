@@ -1,3 +1,5 @@
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Main {
@@ -25,8 +27,6 @@ public class Main {
         profes.addPlayer(coordinador);
         profes.addPlayer(suplentePoo);
 
-        System.out.println(profes.getPlayers().size());
-
         Team estudiantes = new Team("Equipo de estudiantes");
         estudiantes.addPlayer(new Player("San Martin"));
         estudiantes.addPlayer(new Player("Manuel Belgrano"));
@@ -41,5 +41,26 @@ public class Main {
                 estudiantes
         );
         torneoDaVinci.addMatch(primerParcial);
+
+        System.out.println(profes.getPlayers().size());
+        System.out.println(String.format("Cantidad de match: %d", torneoDaVinci.getMatchs().size()));
+
+
+        ArrayList<Match> partidosDeHoy = torneoDaVinci.getMatchs();
+
+        partidosDeHoy.get(0).getLocalTeam().incrementGoalCounter();
+        //partidosDeHoy.get(0).getLocalTeam().incrementGoalCounter();
+        partidosDeHoy.get(0).getVisitantTeam().incrementGoalCounter();
+
+
+        System.out.println(
+                partidosDeHoy.get(0).getLocalTeam().getName() + "(" +
+                partidosDeHoy.get(0).getLocalTeam().getGoalCounter() + ")" +
+                " - " +
+                        partidosDeHoy.get(0).getVisitantTeam().getName() + "(" +
+                partidosDeHoy.get(0).getVisitantTeam().getGoalCounter() + ")"
+        );
+
+
     }
 }
