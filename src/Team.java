@@ -3,11 +3,19 @@ import java.util.ArrayList;
 public class Team {
     private String name;
     private ArrayList<Player> players;
-    private int goalCounter = 0;
+    private int goalCounter;
 
     Team () {
         this.setPlayers(new ArrayList<>());
+        this.setGoalCounter(0);
     }
+
+    Team (String name) {
+        this.setPlayers(new ArrayList<>());
+        this.setGoalCounter(0);
+        this.setName(name);
+    }
+
     //setter name
     public void setName (String name){
         this.name = name;
@@ -44,6 +52,10 @@ public class Team {
     //getter goalCounter:: void -> int
     public int getGoalCounter() {
         return this.goalCounter;
+    }
+
+    public void setGoalCounter(int goalCounter) {
+        this.goalCounter = goalCounter;
     }
 
     //incrementGoalCounter:: (void) -> void

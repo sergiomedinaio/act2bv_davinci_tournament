@@ -20,15 +20,14 @@ public class Main {
         Player coordinador = new Player("Coordinador AdS");
         Player suplentePoo = new Player("Suplente POO");
 
-        Team profes = new Team();
-
+        Team profes = new Team("Equipo de profes");
         profes.addPlayer(profeSergio);
         profes.addPlayer(coordinador);
         profes.addPlayer(suplentePoo);
 
         System.out.println(profes.getPlayers().size());
 
-        Team estudiantes = new Team();
+        Team estudiantes = new Team("Equipo de estudiantes");
         estudiantes.addPlayer(new Player("San Martin"));
         estudiantes.addPlayer(new Player("Manuel Belgrano"));
         estudiantes.addPlayer(new Player("Mariano Moreno"));
