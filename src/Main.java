@@ -42,24 +42,7 @@ public class Main {
         );
         torneoDaVinci.addMatch(primerParcial);
 
-        System.out.println(profes.getPlayers().size());
-        System.out.println(String.format("Cantidad de match: %d", torneoDaVinci.getMatchs().size()));
-
-
-        ArrayList<Match> partidosDeHoy = torneoDaVinci.getMatchs();
-
-        partidosDeHoy.get(0).getLocalTeam().incrementGoalCounter();
-        //partidosDeHoy.get(0).getLocalTeam().incrementGoalCounter();
-        partidosDeHoy.get(0).getVisitantTeam().incrementGoalCounter();
-
-
-        System.out.println(
-                partidosDeHoy.get(0).getLocalTeam().getName() + "(" +
-                partidosDeHoy.get(0).getLocalTeam().getGoalCounter() + ")" +
-                " - " +
-                        partidosDeHoy.get(0).getVisitantTeam().getName() + "(" +
-                partidosDeHoy.get(0).getVisitantTeam().getGoalCounter() + ")"
-        );
+        System.out.println(primerParcial.generateMarker());
 
 
     }

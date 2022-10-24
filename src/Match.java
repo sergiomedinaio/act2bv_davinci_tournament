@@ -35,6 +35,14 @@ public class Match {
         this.setVisitantTeam(visitantTeam);
     }
 
+    public String generateMarker() {
+        return String.format("%s (%d) - (%d) %s",
+            this.getLocalTeam().getName(),
+            this.getLocalTeamScore(),
+            this.getVisitantTeamScore(),
+            this.getLocalTeam().getName()
+        );
+    }
 
     // settter location
     public void setLocation(String location) {
