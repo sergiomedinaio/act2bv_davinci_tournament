@@ -44,6 +44,11 @@ public class Match {
         );
     }
 
+    public void generatePlayersList() {
+        this.getLocalTeam().getPlayers().forEach(player -> System.out.println(player.getName()));
+        this.getVisitantTeam().getPlayers().forEach(player -> System.out.println(player.getName()));
+    }
+
     // settter location
     public void setLocation(String location) {
         this.location = location;

@@ -42,7 +42,14 @@ public class Main {
         );
         torneoDaVinci.addMatch(primerParcial);
 
-        System.out.println(primerParcial.generateMarker());
+        primerParcial.generatePlayersList();
+        System.out.println("Anotó el equipo local");
+        primerParcial.incrementLocalTeamScore();
+        System.out.println("Anotó el equipo visitante");
+        primerParcial.incrementVisitantTeamScore();
+        System.out.println("Anotó el equipo visitante");
+        primerParcial.incrementVisitantTeamScore();
+        System.out.println("resultado: " +primerParcial.generateMarker());
 
 
     }
