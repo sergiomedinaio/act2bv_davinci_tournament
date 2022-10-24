@@ -18,19 +18,19 @@ public class Main {
 
         Date fechaDeParcial = new Date(2022, 8, 29);
 
-        Player profeSergio = new Player("Sergio Medina");
-        Player coordinador = new Player("Coordinador AdS");
-        Player suplentePoo = new Player("Suplente POO");
-
         Team profes = new Team("Equipo de profes");
-        profes.addPlayer(profeSergio);
-        profes.addPlayer(coordinador);
-        profes.addPlayer(suplentePoo);
+        profes.addPlayer(new Player("Profe Poo"));
+        profes.addPlayer(new Player("Profe Adp"));
+        profes.addPlayer(new Player("Profe pw1"));
+        profes.addPlayer(new Player("Profe ux"));
+        profes.addPlayer(new Player("Profe pw2"));
 
         Team estudiantes = new Team("Equipo de estudiantes");
-        estudiantes.addPlayer(new Player("San Martin"));
-        estudiantes.addPlayer(new Player("Manuel Belgrano"));
-        estudiantes.addPlayer(new Player("Mariano Moreno"));
+        estudiantes.addPlayer(new Player("Estudiante Martin"));
+        estudiantes.addPlayer(new Player("Estudiante Manuel"));
+        estudiantes.addPlayer(new Player("Estudiante Marcos"));
+        estudiantes.addPlayer(new Player("Estudiante Santino"));
+        estudiantes.addPlayer(new Player("Estudiante Mateo"));
 
         //....
 
