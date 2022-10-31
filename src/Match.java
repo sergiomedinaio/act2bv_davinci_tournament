@@ -114,4 +114,35 @@ public class Match {
         this.localTeamScore ++;
         return;
     }
+
+    public boolean isLocalTeam(Team team) {
+        return team.getName() == this.localTeam.getName();
+    }
+
+    public boolean isVisitantTeam(Team team) {
+        return team.getName() == this.visitantTeam.getName();
+    }
+
+    public void makeGoal(Team team, Player player) {
+        if(!isLocalTeam(team) && !isVisitantTeam(team)) return;
+        if(isLocalTeam(team)) incrementLocalTeamScore();
+        if(isVisitantTeam(team)) incrementVisitantTeamScore();
+
+        team.incrementGoalCounter();
+        //player.s
+    }
+
+    public void makeLocalGoal(int playerPosition) {
+        this.makeGoal(
+            this.localTeam,
+            this.localTeam.getPlayers().get(playerPosition)
+        );
+    }
+
+    public void makeVisitantGoal(int playerPosition) {
+        this.makeGoal(
+            this.visitantTeam,
+            this.visitantTeam.getPlayers().get(playerPosition)
+        );
+    }
 }

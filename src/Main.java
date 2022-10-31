@@ -44,11 +44,11 @@ public class Main {
 
         primerParcial.generatePlayersList();
         System.out.println("Anotó el equipo local");
-        primerParcial.incrementLocalTeamScore();
+        primerParcial.makeLocalGoal(0);
         System.out.println("Anotó el equipo visitante");
-        primerParcial.incrementVisitantTeamScore();
+        primerParcial.makeVisitantGoal(0);
         System.out.println("Anotó el equipo visitante");
-        primerParcial.incrementVisitantTeamScore();
+        primerParcial.makeLocalGoal(0);
         System.out.println("resultado: " +primerParcial.generateMarker());
 
 
