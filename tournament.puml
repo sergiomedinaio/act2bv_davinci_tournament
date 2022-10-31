@@ -1,0 +1,89 @@
+@startuml
+class Season {
+- String name
+- Date startDate
+- Date endDate
+- ArrayList<Match> matchs
+~ <<Create>> Season()
+~ <<Create>> Season(String)
+~ <<Create>> Season(String,Date,Date)
++ void setName(String)
++ String getName()
++ void setStartDate(Date)
++ Date getStartDate()
++ Date getEndDate()
++ void setEndDate(Date)
++ ArrayList<Match> getMatchsByDate(Date)
++ void addMatch(Match)
++ ArrayList<Match> getMatchs()
++ void setMatchs(ArrayList<Match>)
+}
+class Team {
+- String name
+- ArrayList<Player> players
+- int goalCounter
+~ <<Create>> Team()
+~ <<Create>> Team(String)
++ void setName(String)
++ String getName()
++ ArrayList<Player> getPlayers()
++ void setPlayers(ArrayList<Player>)
++ void addPlayer(Player)
++ void removePlayer(Player)
++ int getGoalCounter()
++ void setGoalCounter(int)
++ void incrementGoalCounter()
+}
+class Main {
++ {static} void main(String[])
+}
+class Player {
+- String name
+- Team team
+- String position
+- int goalCounter
+~ <<Create>> Player(String)
++ String getName()
++ void setName(String)
++ String getPosition()
++ void setPosition(String)
++ int getGoalCounter()
+- void setGoalCounter(int)
++ void makeGoal()
++ Team getTeam()
++ void setTeam(Team)
++ void incrementGoalCounter()
+}
+class Match {
+- Date date
+- String location
+- Team localTeam
+- Team visitantTeam
+- int localTeamScore
+- int visitantTeamScore
+~ <<Create>> Match()
+~ <<Create>> Match(String)
+~ <<Create>> Match(String,Date)
+~ <<Create>> Match(String,Date,Team,Team)
++ String generateMarker()
++ void generatePlayersList()
++ void setLocation(String)
++ Date getDate()
++ void setDate(Date)
++ Team getLocalTeam()
++ void setLocalTeam(Team)
++ Team getVisitantTeam()
++ void setVisitantTeam(Team)
++ int getVisitantTeamScore()
++ int getLocalTeamScore()
++ void incrementVisitantTeamScore()
++ void incrementLocalTeamScore()
++ boolean isLocalTeam(Team)
++ boolean isVisitantTeam(Team)
++ void makeGoal(Team,Player)
++ void makeLocalGoal(int)
++ void makeVisitantGoal(int)
+}
+
+Team -- Player
+@enduml
