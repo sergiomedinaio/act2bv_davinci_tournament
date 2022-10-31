@@ -48,7 +48,7 @@ public class Main {
         System.out.println("Anotó el equipo visitante");
         primerParcial.makeVisitantGoal(0);
         System.out.println("Anotó el equipo visitante");
-        primerParcial.makeLocalGoal(0);
+        primerParcial.makeLocalGoal(2);
         System.out.println("resultado: " +primerParcial.generateMarker());
 
 

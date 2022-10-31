@@ -56,4 +56,8 @@ public class Player {
         this.team = team;
         return;
     }
+
+    public void incrementGoalCounter() {
+        this.goalCounter++;
+    }
 }
