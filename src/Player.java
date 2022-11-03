@@ -43,6 +43,7 @@ public class Player {
     }
 
     public void makeGoal() {
+        this.incrementGoalCounter();
         return;
     }
 
