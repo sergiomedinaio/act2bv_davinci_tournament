@@ -1,8 +1,10 @@
 public class MatchResult {
     private int localTeamScore;
     private int visitantTeamScore;
+    private Match match;
 
-    public MatchResult() {
+    public MatchResult(Match match) {
+        this.match = match;
         setLocalTeamScore(0);
         setVisitantTeamScore(0);
     }
